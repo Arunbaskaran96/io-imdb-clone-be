@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import usermodel from "../models/usermodal.js";
+import usermodel from "../models/userModal.js";
 import { errorHandler } from "../utils/errorHandler.js";
 const JWT_SCT = "iofactory";
 
