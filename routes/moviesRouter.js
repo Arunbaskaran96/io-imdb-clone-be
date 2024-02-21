@@ -6,7 +6,7 @@ import {
 } from "../controllers/moviesController.js";
 const router = express.Router();
 
-router.post("/addmovies", addMovie);
+router.post("/addmovie", addMovie);
 router.get("/getmovies", getMovies);
 router.put("/editmovie/:id", editMovie);
 

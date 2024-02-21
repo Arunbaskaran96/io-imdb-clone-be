@@ -20,6 +20,11 @@ mongoose
     console.log(err);
   });
 
+server.use("/api", actorRouter);
+server.use("/api", producerRouter);
+server.use("/api", movieRouter);
+server.use("/api", userRouter);
+
 server.use((error, req, res, next) => {
   const statuscode = error.statuscode || 500;
   const message = error.message || "Internal server error";
@@ -29,11 +34,6 @@ server.use((error, req, res, next) => {
     message,
   });
 });
-
-server.use("/api", actorRouter);
-server.use("/api", producerRouter);
-server.use("/api", movieRouter);
-server.use("/api", userRouter);
 
 server.listen(8000, () => {
   console.log("server connected");

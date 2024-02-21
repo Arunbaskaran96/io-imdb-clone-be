@@ -38,7 +38,7 @@ export const signin = async (req, res, next) => {
         const { password, ...rest } = user._doc;
         res.status(200).json({ ...rest, token });
       } else {
-        next(errorHandler(400, "user name/password incorrect"));
+        next(errorHandler(400, "Incorrect email/password"));
       }
     } else {
       next(errorHandler(400, "User not found"));
